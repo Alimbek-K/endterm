@@ -1,0 +1,267 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>GameHub | Booking</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+    <nav class="navbar navbar-expand-lg navbar-dark">
+        <div class="container">
+            <a class="navbar-brand" href="index.html">
+                GAME<span>HUB</span>
+            </a>
+
+            <button class="navbar-toggler" type="button"
+                    data-bs-toggle="collapse"
+                    data-bs-target="#navbarMenu"
+                    aria-controls="navbarMenu"
+                    aria-expanded="false"
+                    aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+
+            <div class="collapse navbar-collapse" id="navbarMenu">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item">
+                        <a class="nav-link" href="index.html">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="games.html">Games</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="tournaments.html">Tournaments</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link active" aria-current="page" href="booking.html">Booking</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <header class="page-header">
+        <div class="container text-center">
+            <p>RESERVE YOUR SPOT</p>
+            <h1>BOOK YOUR <span>GAME</span></h1>
+            <p class="page-description">
+                Choose your gaming zone, date and time.
+                Your next gaming session starts here.
+            </p>
+        </div>
+    </header>
+
+    <main class="booking-section">
+        <div class="container">
+            <div class="row g-5">
+
+                <div class="col-lg-7">
+                    <div class="booking-form">
+                        <h2>BOOK A PC</h2>
+                        <p class="form-description">
+                            Fill in the form below to reserve your gaming spot.
+                        </p>
+
+                        <form id="bookingForm" novalidate>
+                            <div class="row g-3">
+
+                                <div class="col-md-6">
+                                    <label for="name" class="form-label">Full Name</label>
+                                    <input type="text" class="form-control"
+                                           id="name" name="name"
+                                           placeholder="Your full name" required>
+                                    <div class="field-error" id="nameError"></div>
+                                </div>
+
+                                <div class="col-md-6">
+                                    <label for="email" class="form-label">Email</label>
+                                    <input type="email" class="form-control"
+                                           id="email" name="email"
+                                           placeholder="example@email.com" required>
+                                    <div class="field-error" id="emailError"></div>
+                                </div>
+
+                                <div class="col-md-6">
+                                    <label for="phone" class="form-label">Phone Number</label>
+                                    <input type="tel" class="form-control"
+                                           id="phone" name="phone"
+                                           placeholder="+7 777 123 45 67" required>
+                                    <div class="field-error" id="phoneError"></div>
+                                </div>
+
+                                <div class="col-md-6">
+                                    <label for="zone" class="form-label">Gaming Zone</label>
+                                    <select class="form-select" id="zone" name="zone" required>
+                                        <option value="">Choose zone</option>
+                                        <option value="standard">Standard PC</option>
+                                        <option value="pro">Pro PC</option>
+                                        <option value="vip">VIP Room</option>
+                                    </select>
+                                    <div class="field-error" id="zoneError"></div>
+                                </div>
+
+                                <div class="col-md-6">
+                                    <label for="date" class="form-label">Date</label>
+                                    <input type="date" class="form-control"
+                                           id="date" name="date" required>
+                                    <div class="field-error" id="dateError"></div>
+                                </div>
+
+                                <div class="col-md-6">
+                                    <label for="time" class="form-label">Time</label>
+                                    <input type="time" class="form-control"
+                                           id="time" name="time" required>
+                                    <div class="field-error" id="timeError"></div>
+                                </div>
+
+                                <div class="col-md-6">
+                                    <label for="hours" class="form-label">Gaming Time</label>
+                                    <select class="form-select" id="hours" name="hours" required>
+                                        <option value="">Choose duration</option>
+                                        <option value="1">1 hour</option>
+                                        <option value="2">2 hours</option>
+                                        <option value="3">3 hours</option>
+                                        <option value="5">5 hours</option>
+                                    </select>
+                                    <div class="field-error" id="hoursError"></div>
+                                </div>
+
+                                <div class="col-md-6">
+                                    <label for="game" class="form-label">Game</label>
+                                    <select class="form-select" id="game" name="game">
+                                        <option>Counter-Strike 2</option>
+                                        <option>Valorant</option>
+                                        <option>EA Sports FC</option>
+                                        <option>Dota 2</option>
+                                        <option>GTA V</option>
+                                        <option>Minecraft</option>
+                                        <option>Fortnite</option>
+                                        <option>Apex Legends</option>
+                                    </select>
+                                </div>
+
+                                <div class="col-12">
+                                    <label for="message" class="form-label">
+                                        Additional Message
+                                    </label>
+                                    <textarea class="form-control" id="message"
+                                              name="message" rows="4"
+                                              placeholder="Any special requests?"></textarea>
+                                </div>
+
+                                <div class="col-12">
+                                    <div class="form-check">
+                                        <input class="form-check-input"
+                                               type="checkbox" id="rules"
+                                               name="rules" required>
+                                        <label class="form-check-label" for="rules">
+                                            I agree to the GameHub rules
+                                        </label>
+                                    </div>
+                                    <div class="field-error" id="rulesError"></div>
+                                </div>
+
+                                <div class="col-12">
+                                    <div class="booking-total" aria-live="polite">
+                                        <span>Estimated Total</span>
+                                        <strong id="totalPrice">$0</strong>
+                                    </div>
+                                </div>
+
+                                <div class="col-12">
+                                    <button type="submit"
+                                            class="btn btn-main booking-button">
+                                        CONFIRM BOOKING
+                                    </button>
+                                </div>
+
+                                <div class="col-12">
+                                    <div id="bookingSuccess"
+                                         class="booking-success"
+                                         role="status"
+                                         hidden></div>
+                                </div>
+
+                            </div>
+                        </form>
+                    </div>
+                </div>
+
+                <div class="col-lg-5">
+                    <div class="booking-info">
+                        <p class="booking-small">GAMEHUB</p>
+                        <h2>CHOOSE YOUR <span>ZONE</span></h2>
+
+                        <div class="price-card">
+                            <div>
+                                <h3>STANDARD</h3>
+                                <p>Gaming PC - 144Hz monitor</p>
+                            </div>
+                            <strong>$3<span>/hour</span></strong>
+                        </div>
+
+                        <div class="price-card featured-price">
+                            <div>
+                                <h3>PRO</h3>
+                                <p>Powerful PC - 240Hz monitor</p>
+                            </div>
+                            <strong>$5<span>/hour</span></strong>
+                        </div>
+
+                        <div class="price-card">
+                            <div>
+                                <h3>VIP ROOM</h3>
+                                <p>Private room - Premium setup</p>
+                            </div>
+                            <strong>$8<span>/hour</span></strong>
+                        </div>
+
+                        <div class="opening-hours">
+                            <h3>OPENING HOURS</h3>
+                            <div>
+                                <span>Monday - Thursday</span>
+                                <strong>10:00 - 00:00</strong>
+                            </div>
+                            <div>
+                                <span>Friday - Sunday</span>
+                                <strong>10:00 - 02:00</strong>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </main>
+
+    <footer>
+        <div class="container">
+            <div class="row align-items-center">
+                <div class="col-md-6">
+                    <h3>GAME<span>HUB</span></h3>
+                    <p>Play. Compete. Win.</p>
+                </div>
+                <div class="col-md-6 text-md-end">
+                    <p>© 2026 GameHub Gaming Club</p>
+                </div>
+            </div>
+        </div>
+        <div class="container mt-3">
+    <p class="credits-text">
+        Built with Bootstrap and jQuery.
+        AI assistance: ChatGPT.
+        <a href="CREDITS.md">Credits</a>
+    </p>
+</div>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+    <script src="js/main.js"></script>
+    <script src="js/booking.js"></script>
+</body>
+</html>

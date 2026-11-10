@@ -1,0 +1,154 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>GameHub | Tournaments</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+    <nav class="navbar navbar-expand-lg navbar-dark">
+        <div class="container">
+            <a class="navbar-brand" href="index.html">
+                GAME<span>HUB</span>
+            </a>
+
+            <button class="navbar-toggler" type="button"
+                    data-bs-toggle="collapse"
+                    data-bs-target="#navbarMenu"
+                    aria-controls="navbarMenu"
+                    aria-expanded="false"
+                    aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+
+            <div class="collapse navbar-collapse" id="navbarMenu">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item">
+                        <a class="nav-link" href="index.html">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="games.html">Games</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link active" aria-current="page" href="tournaments.html">Tournaments</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="booking.html">Booking</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <header class="page-header">
+        <div class="container text-center">
+            <p>COMPETE WITH THE BEST</p>
+            <h1>GAMEHUB <span>TOURNAMENTS</span></h1>
+            <p class="page-description">
+                Find your next competition and explore upcoming tournaments.
+            </p>
+        </div>
+    </header>
+
+    <main class="tournaments-section">
+        <div class="container">
+
+            <div class="tournament-controls">
+                <div>
+                    <label for="tournamentSearch" class="form-label">Search Tournaments</label>
+                    <input type="search" id="tournamentSearch"
+                           class="form-control"
+                           placeholder="Search tournament...">
+                </div>
+
+                <div>
+                    <label for="statusFilter" class="form-label">Status</label>
+                    <select id="statusFilter" class="form-select">
+                        <option value="all">All Statuses</option>
+                        <option value="Open">Open</option>
+                        <option value="Soon">Coming Soon</option>
+                    </select>
+                </div>
+
+                <div class="tournament-reset">
+                    <button id="resetTournaments" class="btn btn-main" type="button">
+                        RESET
+                    </button>
+                </div>
+            </div>
+
+            <p id="tournamentCount" class="games-count" aria-live="polite"></p>
+
+            <div id="tournamentCards" class="row g-4"></div>
+
+            <p id="noTournaments" class="no-games" role="status" hidden>
+                No tournaments found. Try another search.
+            </p>
+
+            <section class="schedule">
+                <div class="section-title">
+                    <p>UPCOMING EVENTS</p>
+                    <h2>TOURNAMENT <span>SCHEDULE</span></h2>
+                </div>
+
+                <div class="table-responsive">
+                    <table class="table tournament-table">
+                        <thead>
+                            <tr>
+                                <th>Game</th>
+                                <th>Date</th>
+                                <th>Format</th>
+                                <th>Players</th>
+                                <th>Prize</th>
+                                <th>Status</th>
+                            </tr>
+                        </thead>
+                        <tbody id="tournamentTableBody"></tbody>
+                    </table>
+                </div>
+            </section>
+
+        </div>
+    </main>
+
+    <section class="games-cta">
+        <div class="container text-center">
+            <p>READY TO COMPETE?</p>
+            <h2>JOIN THE NEXT <span>TOURNAMENT</span></h2>
+            <a href="booking.html" class="btn btn-main mt-3">
+                BOOK A GAMING SESSION
+            </a>
+        </div>
+    </section>
+
+    <footer>
+        <div class="container">
+            <div class="row align-items-center">
+                <div class="col-md-6">
+                    <h3>GAME<span>HUB</span></h3>
+                    <p>Play. Compete. Win.</p>
+                </div>
+                <div class="col-md-6 text-md-end">
+                    <p>© 2026 GameHub Gaming Club</p>
+                </div>
+            </div>
+        </div>
+        <div class="container mt-3">
+    <p class="credits-text">
+        Built with Bootstrap and jQuery.
+        AI assistance: ChatGPT.
+        <a href="CREDITS.md">Credits</a>
+    </p>
+</div>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+    <script src="js/main.js"></script>
+    <script src="js/tournaments.js"></script>
+</body>
+</html>
